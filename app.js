@@ -14,7 +14,7 @@ $(document).ready(() => {
 
     requestAnimationFrame(raf)
 
-    gsap.registerPlugin(ScrollTrigger, Draggable)
+    gsap.registerPlugin(ScrollTrigger, Draggable, CSSRulePlugin)
 
     SplitType.create(".hero-txt-h1");
 
@@ -32,11 +32,6 @@ $(document).ready(() => {
 
     gsap.set(".mob-inner", {
         yPercent: -100
-    });
-
-    gsap.set(".animated-porfolio-wrapper", {
-        yPercent: 100,
-        scale: 0
     });
 
     gsap.set(".faq-body", {
@@ -217,4 +212,54 @@ $(document).ready(() => {
 
     const player = new Plyr('#player');
     const playerTwo = new Plyr('#player-two');
+
+    $(document).ready(function () {
+        function activateTab(tab_id) {
+            $(".btn-tabs").removeClass('active');
+            $(".tab-content").removeClass('active');
+
+            $("[data-tab='" + tab_id + "']").addClass('active');
+            $("#" + tab_id).addClass('active');
+        }
+
+        // Extract tab identifier from URL path if present
+        var path = window.location.pathname;
+        var pathSegments = path.split('/');
+        var tab_id = pathSegments[pathSegments.length - 1]; // Assuming the tab ID is the last segment
+
+        // If the last segment is a valid tab ID, activate the corresponding tab
+        if ($("[data-tab='" + tab_id + "']").length) {
+            activateTab(tab_id);
+        }
+
+        $(".btn-tabs").click(function () {
+            var tab_id = $(this).attr('data-tab');
+            activateTab(tab_id);
+        });
+    });
+
+
+    // const imgReveal = gsap.utils.toArray(".img-reveal img")
+
+    // imgReveal.forEach((img, index) => {
+    //     let img_tl = gsap.timeline({
+    //         scrollTrigger: {
+    //             trigger: img,
+    //             start: "top 80%",
+    //             toggleActions: "play none none reverse",
+    //             markers: true
+    //         },
+    //     });
+
+    //     img_tl.to(img.parentElement, {
+    //         top: "100%",
+    //         duration: 1.4,
+    //     }).from(img, {
+    //         scale: 1.2,
+    //         delay: -1.4,
+    //         duration: 1.4,
+    //     });
+    // })
+
+
 })

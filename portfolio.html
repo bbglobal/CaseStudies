@@ -7,7 +7,6 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
     <link rel="stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="./common.css">
     <link rel="stylesheet" href="./style.css">
     <title>Portfolio</title>
 </head>
@@ -184,51 +183,214 @@
 
         </section>
 
-        <section class="select-tabs">
+        <section class="select-tabs case-studies">
 
             <h2 class="tab-head"></h2>
 
             <div class="tab-wrapper">
 
-                <button class="btn-web btn-tabs">
+                <button class="btn-all btn-tabs" data-tab="all">
+                    All
+                    <div class="layer-one"></div>
+                    <div class="layer-two"></div>
+                </button>
+
+                <button class="btn-web btn-tabs active" data-tab="web">
                     Websites
                     <div class="layer-one"></div>
                     <div class="layer-two"></div>
                 </button>
 
-                <button class="btn-commerce btn-tabs">
+                <button class="btn-commerce btn-tabs" data-tab="ecommerce">
                     Ecommerce
                     <div class="layer-one"></div>
                     <div class="layer-two"></div>
                 </button>
 
-                <button class="btn-logo btn-tabs">
+                <button class="btn-logo btn-tabs" data-tab="logo">
                     Logo
                     <div class="layer-one"></div>
                     <div class="layer-two"></div>
                 </button>
 
-                <button class="btn-logo btn-tabs">
+                <button class="btn-logo btn-tabs" data-tab="app">
                     App
                     <div class="layer-one"></div>
                     <div class="layer-two"></div>
                 </button>
 
-                <button class="btn-video btn-tabs">
+                <button class="btn-video btn-tabs" data-tab="video-animation">
                     Video Animation
                     <div class="layer-one"></div>
                     <div class="layer-two"></div>
                 </button>
 
-                <button class="btn-branding btn-tabs">
+                <button class="btn-branding btn-tabs" data-tab="branding">
                     Branding
                     <div class="layer-one"></div>
                     <div class="layer-two"></div>
                 </button>
             </div>
 
-            <div class="animated-porfolio-wrapper"></div>
+            <div class="grid-layout tab-content active" id="web">
 
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <div class="img-reveal">
+                            <img src="./img/web/lvl.jpg" alt="case-study">
+                        </div>
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead  fw-600">LVL Up Health Fit</h3>
+                            <p class="generic--head__sec-para s-font  fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor "><span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/reanimated-records.jpg" alt="case-study">
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead fw-600">LVL Up Health Fit</h3>
+                            <p class="generic--head__sec-para s-font fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor "><span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/landbird.jpg" alt="case-study">
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead  fw-600">LVL Up Health Fit</h3>
+                            <p class="generic--head__sec-para s-font  fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor "><span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/ewf.jpg" alt="case-study">
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead fw-600">LVL Up Health Fit</h3>
+                            <p class="generic--head__sec-para s-font fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor "><span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/lee.jpg" alt="case-study">
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead fw-600">LVL Up Health Fit</h3>
+                            <p class="generic--head__sec-para s-font fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor "><span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="grid-layout tab-content" id="ecommerce">
+
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/lvl.jpg" alt="case-study">
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead  fw-600">LVL Up Health Fit</h3>
+                            <p class="generic--head__sec-para s-font  fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor "><span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
 
         </section>
 
@@ -425,12 +587,12 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/CSSRulePlugin.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>
     <script src="https://unpkg.com/split-type"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
     <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
     <script src="./app.js"></script>

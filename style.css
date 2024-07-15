@@ -1,3 +1,56 @@
+:root {
+    --primary: #F90404;
+    --btn-dark: #c21111;
+    --btn-darker: #a90d0d;
+    --primary-light: #f904040e;
+    --secondary: #1F235A;
+    --bg-pirmary: #FAFAFA;
+    --egg-white: #FAF9F6;
+    --highlihgt: #FFE3D3;
+    --white: #fff;
+    --black: #000;
+    --black-light: #1C1D20;
+}
+
+@font-face {
+    font-family: bbGlobal Sans Regular;
+    src: url("./font/Montserrat/static/Montserrat-Regular.ttf");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: bbGlobal Sans Medium;
+    src: url("./font/Montserrat/static/Montserrat-Medium.ttf");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: bbGlobal Sans SemiBold;
+    src: url("./font/Montserrat/static/Montserrat-SemiBold.ttf");
+    font-weight: 600;
+    font-style: normal;
+}
+
+html {
+    font-size: 16px;
+}
+
+.flair {
+    width: 0.9375rem;
+    /* 15px */
+    height: 0.9375rem;
+    /* 15px */
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-color: var(--primary);
+    border-radius: 50%;
+}
+
 html.lenis,
 html.lenis body {
     height: auto;
@@ -461,30 +514,154 @@ a:hover {
     top: 0;
 }
 
+/*-------------------------------------------------case-studies--------------------------------------------------------*/
+
+.case-studies {
+    max-width: 100%;
+    padding: 3% 9%;
+}
+
+.case-studies .grid-layout {
+    margin-left: -3.375em;
+    margin-right: -3.375em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 4.375em 0 0;
+}
+
+.grid-layout .img-wrapper {
+    /* transition: .5s; */
+    overflow: hidden;
+}
+
+.img-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.img-reveal {
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.grid-layout .img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.case-studies__card-wrapper {
+    padding: 0 3.375em;
+}
+
+.case-studies__card-wrapper:nth-child(even) {
+    margin: 5em 0 0;
+}
+
+.case-studies__card-wrapper--card-content {
+    font-family: bbGlobal Sans SemiBold, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.625em 0 0 0;
+}
+
+.anchor-wrapper {
+    display: flex;
+}
+
+.case-studies__card-wrapper--card-content .generic--head__subhead {
+    font-size: 1.25em;
+    text-transform: capitalize;
+}
+
+p.s-font {
+    font-size: 1.125em;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.arrow-anchor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: none;
+}
+
+.arrow-anchor.black-col span {
+    color: var(--black);
+    /* transition: .25s; */
+}
+
+.arrow-anchor span {
+    color: #fff;
+    font-size: 1.25em;
+    font-weight: 600;
+    letter-spacing: 0;
+    margin: 0 .75em 0 0;
+}
+
+.grid-layout .img-wrapper {
+    /* transition: .5s; */
+    overflow: hidden;
+}
+
+.arrow-anchor .img-wrapper {
+    width: 3em;
+    height: 3em;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--primary);
+    /* transition: .4s; */
+}
+
+.arrow-anchor .img-wrapper svg {
+    width: 1em;
+    transform: rotate(0);
+    /* transition: .4s; */
+}
+
+.tab-content {
+    display: none !important;
+}
+
+.active {
+    display: grid !important;
+}
+
 /*-------------------------------------------------testimonials--------------------------------------------------------*/
 
 .testimonials {
     margin: 0 1rem;
-    /* 16px */
 }
 
 .tes-txt-wrapper {
     margin: 1rem 0;
-    /* 16px 0 */
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     border-radius: 3.125rem;
-    /* 50px */
     padding: 5rem 3.75rem;
-    /* 80px 60px */
     background: var(--egg-white);
 }
 
 .tes-txt-wrapper img {
     width: 9.375rem;
-    /* 150px */
+}
+
+svg.svg-convert.svg-converted {
+    fill: #fff;
 }
 
 /*-------------------------------------------------cta--------------------------------------------------------*/
