@@ -1,265 +1,270 @@
 $(document).ready(() => {
+  const lenis = new Lenis({
+    duration: 3,
+    smoothWheel: true,
+    smoothTouch: true,
+    direction: "vertical",
+  });
 
-    const lenis = new Lenis({
-        duration: 3,
-        smoothWheel: true,
-        smoothTouch: true,
-        direction: "vertical",
-    });
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
 
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
+  requestAnimationFrame(raf);
 
-    requestAnimationFrame(raf)
+  gsap.registerPlugin(ScrollTrigger, Draggable, CSSRulePlugin);
 
-    gsap.registerPlugin(ScrollTrigger, Draggable, CSSRulePlugin)
+  SplitType.create(".hero-txt-h1");
 
-    SplitType.create(".hero-txt-h1");
+  //setting elements inital css
 
-    //setting elements inital css
+  gsap.set(".flair", { xPercent: -50, yPercent: -50 });
 
-    gsap.set(".flair", { xPercent: -50, yPercent: -50 });
+  gsap.set(".char", {
+    yPercent: 100,
+  });
 
-    gsap.set(".char", {
-        yPercent: 100
-    });
+  gsap.set(".portfolio-punch .line-inner", {
+    yPercent: -100,
+  });
 
-    gsap.set(".portfolio-punch .line-inner", {
-        yPercent: -100
-    });
+  gsap.set(".mob-inner", {
+    yPercent: -100,
+  });
 
-    gsap.set(".mob-inner", {
-        yPercent: -100
-    });
+  gsap.set(".faq-body", {
+    display: "none",
+    opacity: 0,
+  });
 
-    gsap.set(".faq-body", {
-        display: "none",
-        opacity: 0,
-    });
+  let xTo = gsap.quickTo(".flair", "x", { duration: 0.6, ease: "power3" }),
+    yTo = gsap.quickTo(".flair", "y", { duration: 0.6, ease: "power3" });
 
-    let xTo = gsap.quickTo(".flair", "x", { duration: 0.6, ease: "power3" }),
-        yTo = gsap.quickTo(".flair", "y", { duration: 0.6, ease: "power3" });
+  window.addEventListener("mousemove", (e) => {
+    xTo(e.clientX);
+    yTo(e.clientY);
+  });
 
-    window.addEventListener("mousemove", e => {
-        xTo(e.clientX);
-        yTo(e.clientY);
-    });
+  const flair = $(".flair");
 
-    const flair = $('.flair');
+  document.body.addEventListener(
+    "mouseenter",
+    (e) => {
+      if (window.getComputedStyle(e.target).cursor === "pointer") {
+        gsap.to(flair, { scale: 0.5, duration: 0.2 });
+      }
+    },
+    true
+  );
 
-    document.body.addEventListener('mouseenter', (e) => {
-        if (window.getComputedStyle(e.target).cursor === 'pointer') {
-            gsap.to(flair, { scale: 0.5, duration: 0.2 });
-        }
-    }, true);
+  document.body.addEventListener(
+    "mouseleave",
+    (e) => {
+      if (window.getComputedStyle(e.target).cursor === "pointer") {
+        gsap.to(flair, { scale: 1, duration: 0.2 });
+      }
+    },
+    true
+  );
 
-    document.body.addEventListener('mouseleave', (e) => {
-        if (window.getComputedStyle(e.target).cursor === 'pointer') {
-            gsap.to(flair, { scale: 1, duration: 0.2 });
-        }
-    }, true);
+  //tweens
 
-    //tweens
+  ScrollTrigger.create({
+    trigger: ".portfolio-hero",
+    start: "top top",
+    end: "+=500",
+    scrub: true,
+    pin: true,
+  });
 
-    ScrollTrigger.create({
-        trigger: ".portfolio-hero",
-        start: "top top",
-        end: "+=500",
-        scrub: true,
-        pin: true,
-    })
+  tl = gsap.timeline();
 
-    tl = gsap.timeline();
+  tl.to(".portfolio-hero .line-inner", {
+    scrollTrigger: {
+      trigger: ".portfolio-hero",
+      start: "top center",
+      scrub: true,
+    },
+    yPercent: -100,
+    duration: 1.5,
+    stagger: 0.09,
+    ease: "Expo.easeInOut",
+    delay: 1,
+  });
 
-    tl.to(".portfolio-hero .line-inner", {
-        scrollTrigger: {
-            trigger: ".portfolio-hero",
-            start: "top center",
-            scrub: true
-        },
-        yPercent: -100,
-        duration: 1.5,
-        stagger: 0.09,
-        ease: "Expo.easeInOut",
-        delay: 1
-    });
+  ScrollTrigger.create({
+    trigger: ".portfolio-punch",
+    start: "top top",
+    end: "+=1000",
+    scrub: true,
+    pin: true,
+  });
 
-    ScrollTrigger.create({
-        trigger: ".portfolio-punch",
-        start: "top top",
-        end: "+=1000",
-        scrub: true,
-        pin: true,
-    })
+  const tl_two = gsap.timeline();
 
-    const tl_two = gsap.timeline()
+  tl_two.to(".portfolio-punch .line-inner", {
+    scrollTrigger: {
+      trigger: ".portfolio-punch",
+      start: "top center",
+      scrub: true,
+    },
+    yPercent: 0,
+    duration: 1,
+    stagger: 0.09,
+    ease: "Expo.easeInOut",
+  });
 
-    tl_two.to(".portfolio-punch .line-inner", {
-        scrollTrigger: {
-            trigger: ".portfolio-punch",
-            start: "top center",
-            scrub: true
-        },
+  gsap.to(".char", {
+    scrollTrigger: {
+      trigger: ".customer-reviews",
+      toggleActions: "restart none reverse none",
+    },
+    yPercent: 0,
+    duration: 1,
+    stagger: 0.05,
+    ease: "expo.inOut",
+  });
+
+  $(".button").click(function () {
+    $(this).toggleClass("-menu-open");
+    if ($(this).hasClass("-menu-open")) {
+      gsap.to(".mob-inner", {
         yPercent: 0,
-        duration: 1,
-        stagger: 0.09,
-        ease: "Expo.easeInOut",
-    });
+        duration: 0.8,
+        ease: "expo.inOut",
+      });
 
-    gsap.to(".char", {
-        scrollTrigger: {
-            trigger: ".customer-reviews",
-            toggleActions: "restart none reverse none"
-        },
-        yPercent: 0,
-        duration: 1,
+      gsap.to(".mob-inner .nav-link", {
+        opacity: 1,
+        delay: 0.5,
         stagger: 0.05,
         ease: "expo.inOut",
+      });
+    } else {
+      gsap.to(".mob-inner .nav-link", {
+        opacity: 0,
+        duration: 0.2,
+      });
+
+      gsap.to(".mob-inner", {
+        yPercent: -100,
+        duration: 0.8,
+        ease: "expo.inOut",
+      });
+    }
+  });
+
+  $(".faq-toggler").click(function () {
+    if ($(this).text() == "+") {
+      $(this).text("-");
+
+      gsap.to(".faq-body", {
+        display: "inline-block",
+        opacity: 1,
+      });
+    } else {
+      $(this).text("+");
+
+      gsap.to(".faq-body", {
+        opacity: 0,
+        display: "none",
+      });
+    }
+  });
+
+  $(".clients-slider").slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+  });
+
+  // Select all elements with the classes 'layer-one', 'layer-two', and 'btn-tabs'
+  let layerOneElements = document.querySelectorAll(".layer-one");
+  let layerTwoElements = document.querySelectorAll(".layer-two");
+  let btnTabs = document.querySelectorAll(".btn-tabs");
+
+  // Iterate over each button tab
+  btnTabs.forEach((el, index) => {
+    // Add event listener for mouse enter
+    el.addEventListener("mouseenter", () => {
+      if (!enterAnim.isActive()) enterAnim.restart();
     });
 
-
-    $(".button").click(function () {
-        $(this).toggleClass("-menu-open")
-        if ($(this).hasClass('-menu-open')) {
-            gsap.to(".mob-inner", {
-                yPercent: 0,
-                duration: .8,
-                ease: "expo.inOut"
-            })
-
-            gsap.to(".mob-inner .nav-link", {
-                opacity: 1,
-                delay: .5,
-                stagger: 0.05,
-                ease: "expo.inOut"
-            })
-        } else {
-            gsap.to(".mob-inner .nav-link", {
-                opacity: 0,
-                duration: .2
-            })
-
-            gsap.to(".mob-inner", {
-                yPercent: -100,
-                duration: .8,
-                ease: "expo.inOut"
-            })
-
-        }
-    })
-
-    $(".faq-toggler").click(function () {
-
-        if ($(this).text() == "+") {
-
-            $(this).text("-")
-
-            gsap.to(".faq-body", {
-                display: "inline-block",
-                opacity: 1
-            })
-        } else {
-
-            $(this).text("+")
-
-            gsap.to(".faq-body", {
-                opacity: 0,
-                display: "none",
-            })
-        }
-
-    })
-
-    $('.clients-slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1000,
+    // Add event listener for mouse leave
+    el.addEventListener("mouseleave", () => {
+      if (!leaveAnim.isActive()) leaveAnim.restart();
     });
 
-    // Select all elements with the classes 'layer-one', 'layer-two', and 'btn-tabs'
-    let layerOneElements = document.querySelectorAll(".layer-one");
-    let layerTwoElements = document.querySelectorAll(".layer-two");
-    let btnTabs = document.querySelectorAll(".btn-tabs");
+    // Create enter animation timeline
+    let enterAnim = gsap.timeline();
+    enterAnim
+      .to(layerOneElements[index], { left: "0%" })
+      .to(layerTwoElements[index], { left: "0%" }, 0.3);
+    enterAnim.reversed(true);
 
-    // Iterate over each button tab
-    btnTabs.forEach((el, index) => {
-        // Add event listener for mouse enter
-        el.addEventListener("mouseenter", () => {
-            if (!enterAnim.isActive()) enterAnim.restart();
-        });
+    // Create leave animation timeline
+    let leaveAnim = gsap.timeline();
+    leaveAnim
+      .to(layerTwoElements[index], { left: "100%", scale: 1 })
+      .to(layerOneElements[index], { left: "100%" }, 0.3);
+    leaveAnim.reversed(true);
+  });
 
-        // Add event listener for mouse leave
-        el.addEventListener("mouseleave", () => {
-            if (!leaveAnim.isActive()) leaveAnim.restart();
-        });
+  const player = new Plyr("#player");
+  const playerTwo = new Plyr("#player-two");
 
-        // Create enter animation timeline
-        let enterAnim = gsap.timeline();
-        enterAnim.to(layerOneElements[index], { left: "0%" })
-            .to(layerTwoElements[index], { left: "0%" }, 0.3);
-        enterAnim.reversed(true);
+  $(document).ready(function () {
+    function activateTab(tab_id) {
+      $(".btn-tabs").removeClass("active");
+      $(".tab-content").removeClass("active");
 
-        // Create leave animation timeline
-        let leaveAnim = gsap.timeline();
-        leaveAnim.to(layerTwoElements[index], { left: "100%", scale: 1 })
-            .to(layerOneElements[index], { left: "100%" }, 0.3);
-        leaveAnim.reversed(true);
+      $("[data-tab='" + tab_id + "']").addClass("active");
+      $("#" + tab_id).addClass("active");
+    }
+
+    // Extract tab identifier from URL path if present
+    var path = window.location.pathname;
+    var pathSegments = path.split("/");
+    var tab_id = pathSegments[pathSegments.length - 1]; // Assuming the tab ID is the last segment
+
+    // If the last segment is a valid tab ID, activate the corresponding tab
+    if ($("[data-tab='" + tab_id + "']").length) {
+      activateTab(tab_id);
+    }
+
+    $(".btn-tabs").click(function () {
+      var tab_id = $(this).attr("data-tab");
+      activateTab(tab_id);
+    });
+  });
+
+  const rule = CSSRulePlugin.getRule(".img-reveal::after");
+  const imgReveal = gsap.utils.toArray(".case-study-img");
+
+  imgReveal.forEach((img) => {
+    let img_tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: img,
+        start: "top 80%",
+        toggleActions: "play none none reverse",
+        markers: true,
+      },
     });
 
-
-    const player = new Plyr('#player');
-    const playerTwo = new Plyr('#player-two');
-
-    $(document).ready(function () {
-        function activateTab(tab_id) {
-            $(".btn-tabs").removeClass('active');
-            $(".tab-content").removeClass('active');
-
-            $("[data-tab='" + tab_id + "']").addClass('active');
-            $("#" + tab_id).addClass('active');
-        }
-
-        // Extract tab identifier from URL path if present
-        var path = window.location.pathname;
-        var pathSegments = path.split('/');
-        var tab_id = pathSegments[pathSegments.length - 1]; // Assuming the tab ID is the last segment
-
-        // If the last segment is a valid tab ID, activate the corresponding tab
-        if ($("[data-tab='" + tab_id + "']").length) {
-            activateTab(tab_id);
-        }
-
-        $(".btn-tabs").click(function () {
-            var tab_id = $(this).attr('data-tab');
-            activateTab(tab_id);
-        });
-    });
-
-
-    // const imgReveal = gsap.utils.toArray(".img-reveal img")
-
-    // imgReveal.forEach((img, index) => {
-    //     let img_tl = gsap.timeline({
-    //         scrollTrigger: {
-    //             trigger: img,
-    //             start: "top 80%",
-    //             toggleActions: "play none none reverse",
-    //             markers: true
-    //         },
-    //     });
-
-    //     img_tl.to(img.parentElement, {
-    //         top: "100%",
-    //         duration: 1.4,
-    //     }).from(img, {
-    //         scale: 1.2,
-    //         delay: -1.4,
-    //         duration: 1.4,
-    //     });
-    // })
-
-
-})
+    img_tl
+      .to(rule, {
+        top: "100%",
+        duration: 1.4,
+        ease: "expo.in",
+      })
+      .from(img, {
+        scale: 1.2,
+        delay: -1.4,
+        duration: 1.6,
+        stagger: 0.05,
+        ease: "expo.in",
+      });
+  });
+});
