@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/common.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="flair"></div>
+    <header class="portfolio-header">
+        <div class="header-wrapper">
+            <nav class="main-header">
+                <ul class="d-flex align-items-center justify-content-center gap-4">
+                    <li class="nav-link">
+                        <a href="#">
+                            <img src="./img/logo.png" alt="site logo" class="site-logo" />
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> Home </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> Services </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> Portfolio </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> About </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> Blogs </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#"> Contact </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <button class="btn-bbGlobal">Get Started</button>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <header class="mobile-header">
+        <nav class="mobile-nav">
+            <ul class="d-flex align-items-center justify-content-between">
+                <li class="nav-link">
+                    <a href="#">
+                        <img src="./img/logo.png" alt="site logo" class="site-logo" />
+                    </a>
+                </li>
+
+                <li class="nav-link hamburger">
+                    <div class="button">
+                        <svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g>
+                                <line x1="0" y1="17" x2="48" y2="17" stroke-width="1" />
+                                <line x1="0" y1="31" x2="48" y2="31" stroke-width="1" />
+                            </g>
+
+                            <g>
+                                <line x1="0" y1="24" x2="48" y2="24" stroke-width="1" />
+                                <line x1="0" y1="24" x2="48" y2="24" stroke-width="1" />
+                            </g>
+                        </svg>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <nav class="mob-inner d-flex flex-direction align-items-center justify-content-start gap-5">
+            <ul>
+                <li class="nav-link">
+                    <a href="#"> Home </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#"> Services </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#"> Portfolio </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#"> About </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#"> Blogs </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#"> Contact </a>
+                </li>
+
+                <li class="nav-link">
+                    <a href="#">
+                        <button class="btn-bbGlobal">Get Started</button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="portfolio">
+        <section class="intro">
+            <h1 class="portfolio-hero">
+                <div class="line-wrapper">
+                    <div class="line-inner">Welcome</div>
+                </div>
+                <div class="line-wrapper">
+                    <div class="impor line-inner">Brand Boosters Global's</div>
+                </div>
+                <div class="line-wrapper">
+                    <div class="line-inner">Portfolio</div>
+                </div>
+            </h1>
+
+            <h2 class="portfolio-punch">
+                <div class="line-wrapper">
+                    <div class="line-inner">
+                        Turning <span class="impor">Concepts</span> into
+                    </div>
+                </div>
+                <div class="line-wrapper">
+                    <div class="line-inner">
+                        Compelling <span class="impor">Visuals</span>
+                    </div>
+                </div>
+                <div class="line-wrapper">
+                    <div class="line-inner">
+                        Which <span class="impor">Drive</span> More
+                        <span class="impor">Sales</span>
+                    </div>
+                </div>
+            </h2>
+        </section>
+
+        <section class="select-tabs case-studies">
+            <h2 class="tab-head"></h2>
+
+            <div class="tab-wrapper">
+                <button class="btn-all btn-tabs" data-tab="all">
+                    All
+                    <div class="layer-one"></div>
+                    <div class="layer-two"></div>
+                </button>
+
+                <button class="btn-web btn-tabs active" data-tab="web">
+                    Websites
+                    <div class="layer-one"></div>
+                    <div class="layer-two"></div>
+                </button>
+
+                <button class="btn-commerce btn-tabs" data-tab="ecommerce">
+                    Ecommerce
+                    <div class="layer-one"></div>
+                    <div class="layer-two"></div>
+                </button>
+
+                <button class="btn-logo btn-tabs" data-tab="logo">
+                    Logo
+                    <div class="layer-one"></div>
+                    <div class="layer-two"></div>
+                </button>
+
+                <button class="btn-logo btn-tabs" data-tab="app">
+                    App
+                    <div class="layer-one"></div>
+                    <div class="layer-two"></div>
+                </button>
+
+                <button class="btn-video btn-tabs" data-tab="video-animation">
+                    Video Animation
+                    <div class="layer-one"></div>
+                    <div class="layer-two"></div>
+                </button>
+
+                <button class="btn-branding btn-tabs" data-tab="branding">
+                    Branding
+                    <div class="layer-one"></div>
+                    <div class="layer-two"></div>
+                </button>
+            </div>
+
+            <div class="grid-layout tab-content active" id="web">
+
+                <a href="./case-studies/website/lvl/" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/lvl.jpg" alt="case-study" class="case-study-img" />
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead fw-600">LVL Up Health Fit</h3>
+                            <p class="generic--head__sec-para s-font fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor">
+                                <span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="./case-studies/website/landbird/" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/landbird.jpg" alt="case-study" class="case-study-img" />
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead fw-600">Land Bird</h3>
+                            <p class="generic--head__sec-para s-font fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor">
+                                <span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/ewf.jpg" alt="case-study" class="case-study-img" />
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead fw-600">Ecomm Work Force</h3>
+                            <p class="generic--head__sec-para s-font fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor">
+                                <span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/lee.jpg" alt="case-study" class="case-study-img" />
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead fw-600">Lee Meryl Friedlander</h3>
+                            <p class="generic--head__sec-para s-font fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor">
+                                <span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="grid-layout tab-content" id="ecommerce">
+                <a href="#" class="case-studies__card-wrapper">
+                    <div class="img-wrapper img-reveal">
+                        <img src="./img/web/reanimated-records.jpg" alt="case-study" class="case-study-img" />
+                    </div>
+
+                    <div class="case-studies__card-wrapper--card-content">
+                        <div class="generic--head">
+                            <h3 class="generic--head__subhead fw-600">Reanimated Records</h3>
+                            <p class="generic--head__sec-para s-font fw-500">Website</p>
+                        </div>
+                        <div class="anchor-wrapper">
+                            <button class="arrow-anchor">
+                                <span>View Case study</span>
+                                <div class="img-wrapper">
+                                    <svg viewBox="0 0 19 16" class="svg-convert svg-converted"
+                                        src="/assets/svg/anchor-arrow.svg">
+                                        <path class="st0" d="M16.2,7.2l0,1.8L1.1,9.3l0-1.8L16.2,7.2z"></path>
+                                        <path class="st0" d="M11,13.1l-1.1-1.4L14.7,8l-5-3.6l1-1.5l6.8,5.2L11,13.1z">
+                                        </path>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="customer-reviews">
+            <h2 class="hero-txt-h1">Customer Stories</h2>
+
+            <div class="trust-wrapper">
+                <p class="hero-txt-p">Potion customers win hearts and deals!</p>
+                <img src="./img/capterra-rating.png" alt="img" class="trust-img" />
+                <img src="./img/g2-rating.png" alt="img" class="trust-img" />
+            </div>
+
+            <br /><br /><br /><br />
+
+            <div class="clients-slider">
+                <div class="client-logo">
+                    <img src="./img/bridgecorllc.png" alt="client-logo" />
+                </div>
+                <div class="client-logo">
+                    <img src="./img/Steira-Air.png" alt="client-logo" />
+                </div>
+                <div class="client-logo">
+                    <img src="./img/lee.png" alt="client-logo" />
+                </div>
+                <div class="client-logo">
+                    <img src="./img/lisafrance.png" alt="client-logo" style="filter: brightness(0)" />
+                </div>
+                <div class="client-logo">
+                    <img src="./img/task.png" alt="client-logo" />
+                </div>
+            </div>
+
+            <div class="fall-box-wrapper">
+                <div class="fall-box -v1">
+                    <span>Awesome!</span>
+                </div>
+
+                <div class="fall-box -v2">
+                    <span>Fantastic</span>
+                </div>
+
+                <div class="fall-box -v3">
+                    <span>my superpower</span>
+                </div>
+
+                <div class="fall-box -v4">
+                    <span>mind-blowing</span>
+                </div>
+
+                <div class="fall-box -v5">
+                    <span>Next-level</span>
+                </div>
+
+                <div class="fall-box -v6">
+                    <span>Amazing!</span>
+                </div>
+
+                <div class="fall-box -v7">
+                    <span>Personalized</span>
+                </div>
+
+                <div class="fall-box -v8">
+                    <span>Whoa</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="tes-txt-wrapper">
+                            <img src="./img/g2.png" alt="testimonials-img" />
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="tes-txt-wrapper">
+                            <img src="./img/capterra.png" alt="testimonials-img" />
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="tes-txt-wrapper">
+                            <video id="player" playsinline controls>
+                                <source src="./video/paula.mp4" type="video/mp4" />
+
+                                <!-- Captions are optional -->
+                                <!-- <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en"
+                                    default /> -->
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="tes-txt-wrapper">
+                            <video id="player-two" playsinline controls>
+                                <source src="./video/paula.mp4" type="video/mp4" />
+
+                                <!-- Captions are optional -->
+                                <!-- <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en"
+                                    default /> -->
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 col-md-12 col-lg-6">
+                        <div class="cta-txt-wrapper">
+                            <h2 class="cta-head-txt">
+                                Save Time, <br />
+                                <span class="highlight">Sell More.</span>
+                            </h2>
+                            <p class="cta-long-txt">
+                                Automate video personalization with Potion, so you can focus
+                                on closing deals and nurturing relationships. Engage prospects
+                                in a meaningful way.
+                            </p>
+
+                            <button class="btn-cta">TRY FOR FREE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br /><br /><br /><br />
+        <br /><br /><br /><br />
+
+        <section class="faq">
+            <h2 class="faq-head-txt">
+                Frequently <br />
+                Asked <br />
+                Questions <br />
+            </h2>
+
+            <div class="faq-wrapper">
+                <div class="faq-box">
+                    <div class="faq-box-inner">
+                        <div class="faq-head">
+                            <button class="faq-toggler">+</button>
+                            <p class="faq-question">
+                                Why should I use personalized videos for sales prospecting?
+                            </p>
+                        </div>
+                        <p class="faq-body">
+                            Personalized videos stand out in crowded inboxes, making your
+                            outreach more engaging and relevant. Studies show they can boost
+                            response rates by up to 500%, helping you build stronger
+                            connections with prospects and increase your conversion rates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-box">
+                    <div class="faq-box-inner">
+                        <div class="faq-head">
+                            <button class="faq-toggler">+</button>
+                            <p class="faq-question">
+                                Why should I use personalized videos for sales prospecting?
+                            </p>
+                        </div>
+                        <p class="faq-body">
+                            Personalized videos stand out in crowded inboxes, making your
+                            outreach more engaging and relevant. Studies show they can boost
+                            response rates by up to 500%, helping you build stronger
+                            connections with prospects and increase your conversion rates.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-box">
+                    <div class="faq-box-inner">
+                        <div class="faq-head">
+                            <button class="faq-toggler">+</button>
+                            <p class="faq-question">
+                                Why should I use personalized videos for sales prospecting?
+                            </p>
+                        </div>
+                        <p class="faq-body">
+                            Personalized videos stand out in crowded inboxes, making your
+                            outreach more engaging and relevant. Studies show they can boost
+                            response rates by up to 500%, helping you build stronger
+                            connections with prospects and increase your conversion rates.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <script src="./ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.4/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="./ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="./ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/Draggable.min.js"></script>
+    <script src="./assets/js/vendors/cursor.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>
