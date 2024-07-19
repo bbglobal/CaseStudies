@@ -5,7 +5,6 @@ $(document).ready(() => {
 
   //setting elements inital css
 
-
   gsap.set(".char", {
     yPercent: 100,
   });

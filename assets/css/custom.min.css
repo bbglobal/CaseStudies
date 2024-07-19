@@ -13907,7 +13907,7 @@ p.xs-font {
 }
 
 .rmal-hospitality .generic--head__subhead {
-    background: linear-gradient(264.19deg, var(--white) 14.71%, var(--white) 70.43%);
+    background: linear-gradient(264.19deg, var(--black) 14.71%, var(--black) 70.43%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

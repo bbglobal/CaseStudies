@@ -82,4 +82,20 @@ document.addEventListener("DOMContentLoaded", function () { const techSliderBox 
         stagger: 0.05,
         ease: "expo.inOut"
     })
+
+    const dp_tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".research-design",
+            pin: true,
+            start: "top top",
+            end: "+=1000",
+            scrub: 1,
+        }
+    });
+
+    dp_tl.from(".swiper-slide", {
+        opacity: 0,
+        stagger: 1,
+    })
+
 });
